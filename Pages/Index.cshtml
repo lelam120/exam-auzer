@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+
+<h1>Danh sách sản phẩm</h1>
+
+<a asp-page="/Create">Thêm sản phẩm</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Tên</th>
+            <th>Mô tả</th>
+            <th>Giá</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Products)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Description</td>
+            <td>@item.Price</td>
+            <td>
+                <a asp-page="/Edit" asp-route-id="@item.Id">Sửa</a> |
+                <a asp-page="/Delete" asp-route-id="@item.Id">Xóa</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin\\Release\\net8.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/293caa52-ebff-42e6-9e6f-48771148aeed/resourceGroups/learn-8e843aa7-4608-465f-a750-c3e4b8200543/providers/Microsoft.Web/sites/le-ba-ha-lam-webapp"
+}

@@ -1,0 +1,21 @@
+@page "{id:int}"
+@model DeleteModel
+@{
+    ViewData["Title"] = "Xóa sản phẩm";
+}
+
+<h1>Xác nhận xóa</h1>
+
+<h3>Bạn có chắc muốn xóa sản phẩm sau?</h3>
+
+<div>
+    <strong>@Model.Product.Name</strong><br />
+    Mô tả: @Model.Product.Description<br />
+    Giá: @Model.Product.Price
+</div>
+
+<form method="post">
+    <input type="hidden" asp-for="Product.Id" />
+    <button type="submit">Xóa</button> |
+    <a asp-page="/Index">Hủy</a>
+</form>

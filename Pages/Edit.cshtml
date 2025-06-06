@@ -1,0 +1,25 @@
+@page "{id:int}"
+@model EditModel
+@{
+    ViewData["Title"] = "Sửa sản phẩm";
+}
+
+<h1>Sửa sản phẩm</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Product.Id" />
+    <div>
+        <label>Tên sản phẩm:</label>
+        <input asp-for="Product.Name" />
+    </div>
+    <div>
+        <label>Mô tả:</label>
+        <input asp-for="Product.Description" />
+    </div>
+    <div>
+        <label>Giá:</label>
+        <input asp-for="Product.Price" type="number" step="0.01" />
+    </div>
+    <button type="submit">Lưu thay đổi</button> |
+    <a asp-page="/Index">Hủy</a>
+</form>
